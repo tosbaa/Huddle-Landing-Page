@@ -90,6 +90,7 @@ li {
     border-radius: 50%;
     min-width: 38px;
     transition: all 0.1s;
+    margin: 1rem;
 
     &:hover, &:active {
         border: 1px solid $soft-magenta;
@@ -99,9 +100,6 @@ li {
 
 }
 
-li:not(:last-child) {
-    margin-right: 3rem;
-}
 
 .twitter {
     @extend %fa-icon;
