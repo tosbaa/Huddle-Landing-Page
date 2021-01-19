@@ -1,0 +1,46 @@
+@import "../scss/fontawesome.scss";
+@import "../scss/solid.scss";
+@import "../scss/brands.scss";
+
+
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+$font-stack: 'Poppins', 'Open Sans', sans-serif;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: $font-stack;
+}
+
+
+.twitter {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-twitter);
+    }
+}
+
+.facebook {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-facebook-f);
+    }
+}
+
+.instagram {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-instagram);
+    }
+}
