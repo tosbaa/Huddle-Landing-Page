@@ -6142,7 +6142,7 @@ header {
 .main-content {
   padding: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .illustration img {
@@ -6226,7 +6226,7 @@ li:not(:last-child) {
     justify-content: flex-start;
   }
 }
-@media only screen and (max-width: 859px) {
+@media only screen and (max-width: 659px) {
   body {
     background-image: url("../static/images/bg-mobile.svg");
     background-repeat: no-repeat;
