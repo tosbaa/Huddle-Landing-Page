@@ -24,7 +24,13 @@ body {
     background-color: $violet;
 }
 
+header {
+    padding: 4rem;
+
+}
+
 .main-content {
+    padding: 3rem;
     display: grid;  
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
@@ -34,6 +40,65 @@ body {
         max-width: 100%;
         max-height: 100%;
     }
+}
+
+.description {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+
+    p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+h1 {
+    line-height: 7rem;
+}
+
+a, a:link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 1rem 6rem;
+
+    &:active, &:hover {
+        color: white;
+        background-color: $soft-magenta;
+    }
+    transition: all 0.1s;
+}
+
+footer {
+    margin-top: -6rem;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0 5rem;
+
+}
+
+li {
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    min-width: 38px;
+
+    &:hover, &:active {
+        border: 1px solid $soft-magenta;
+        color: $soft-magenta;
+        cursor: pointer;
+    }
+}
+
+li:not(:last-child) {
+    margin-right: 3rem;
 }
 
 .twitter {
@@ -49,6 +114,7 @@ body {
     @extend %fa-icon;
     @extend .fab;
 
+    text-align: center;
     &:before {
         content: fa-content($fa-var-facebook-f);
     }
@@ -60,5 +126,32 @@ body {
 
     &:before {
         content: fa-content($fa-var-instagram);
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    ul {
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (max-width: 859px) {
+
+    body {
+        background-image: url("../static/images/bg-mobile.svg");
+    }
+    
+    .description {
+        text-align: center;
+    }
+    
+    footer {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+
+    ul {
+        justify-content: center;
     }
 }
