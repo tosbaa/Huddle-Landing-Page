@@ -6130,9 +6130,12 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-size: 1.6rem;
   background-image: url("../static/images/bg-desktop.svg");
   background-color: #674baf;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -6226,8 +6229,6 @@ li:hover, li:active {
 @media only screen and (max-width: 659px) {
   body {
     background-image: url("../static/images/bg-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: auto;
   }
 
   .description {
